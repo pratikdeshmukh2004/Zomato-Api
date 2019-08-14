@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body{
+	background-color: #e5e5e5;
+}
+.header{
+	background-color: #cb202d;
+	padding: 5px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	color: whitesmoke;
+}
+.data{
+	margin-top: 120px;
+	width: 1100px;
+}
+.box{
+	background-color: white;
+	display: flex;
+	margin-bottom: 25px;
+	border-radius: 30px 10px 10px 30px;
+	padding-bottom: -10px;
+}
+img{
+	width: 400px;
+	height: 240px;
+	border: 2px solid black;
+	border-radius: 20px 0px 0px 20px;
+}
+hr{
+	width: 700px;
+}
+.title h2{
+	color: red;
+}
+.names{
+	margin-left: 50px;
+	float: left;
+}
+.key{
+	font-size: 20px;
+	padding-right: 20px;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.center{
+	display: flex;
+
+}
+.d2{
+	margin-left:35%;
+	margin-top: 20px;
+}
+.d1{
+	margin-left: 22%;
+}
+input{
+	width: 300px;
+	height: 40px;
+	font-size: 20px;
+}	
+	</style>
+	<title>Zomato.com</title>
+	<link rel="icon" type="image/jpg" href="https://bl.thgim.com/migration_catalog/article18123895.ece/alternates/LANDSCAPE_435/zomato2">
+
+</head>
+<body>
+<div class="header">
+	<center><div class="center">
+		<div class="d1">
+		<h1>Zomato</h1>
+		</div>
+		<div class="d2">
+		<form action="http://localhost:3000/location" method="POST">
+		<input type="text" name="city" placeholder="Search City Name...">
+	</form>
+	</div>
+	</div></center>
+</div>
+<center>
+	<div class="data">
+			<% for (i of data) {%>
+				<a href=<%= i.url %>>
+				<div class="box">
+					<div class="image">
+						<!-- <img src=<%= i.featured_photo %> ></img> -->
+						<% if (i.Image != '' ){ %>
+							<img src= <%= i.Image %> >	
+						<% } else { %>
+							<img src="http://cheersbar.com.au/wp-content/uploads/2016/01/CheersBar-Food-76.jpg" alt= "" ></img>
+						<% } %>
+					</div>
+					<div class="title">
+						<h2> <%= i.Name %> </h2>
+						<div>
+							<h3> <%= i.Address %> </h3>
+							<hr>
+							<table class="names">
+									<tr>
+											<td class="key"> Cuisines :</td>
+											<td> <%= i.cuisines %> </td>
+										</tr>
+									<tr>
+										<td class="key">Average Cost For Two :</td>
+										<td> <%= i.average_cost_for_two %> </td>
+									</tr>
+									<tr>
+										<td class="key"> Price Range :</td>
+										<td> <%= i.price_range %> </td>
+									</tr>
+									<tr>
+										<td class="key"> Has Online Delivery :</td>
+										<td> <%= i.has_online_delivery %> </td>
+									</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				</a>
+			<% } %>
+		</div>
+</center>
+</body>
+</html>

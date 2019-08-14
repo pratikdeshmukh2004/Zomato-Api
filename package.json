@@ -1,0 +1,16 @@
+{
+  "name": "zomato_pacages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pratik",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^4.0.9",
+    "zomato": "^1.1.0"
+  }
+}

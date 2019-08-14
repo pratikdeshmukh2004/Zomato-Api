@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body{
+	background-image: url('https://www.xmple.com/wallpaper/gradient-linear-red-grey-1920x1080-c2-ff0000-778899-a-15-f-14.svg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+.center_div{
+	padding: 11vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	/*background-color: white;*/
+	background: rgba(171, 205, 239, 0.3)
+}
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (max-width: 1125px) {
+	.tab{
+		padding: 20vw;
+	}	
+}
+	</style>
+	<title>Zomato</title>
+	<link rel="icon" href="https://www.apkmirror.com/wp-content/uploads/2019/01/5c3750111e19e-384x384.png">
+	<link rel="stylesheet" type="text/css" href="search.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<body>	
+	<div class="logo">
+		<img src="http://68.media.tumblr.com/d046aa0803f8dbd0ec4e1405a478ba6d/tumblr_inline_nr9ookgtj31sl9h5n_540.png">
+	</div>
+	<div class="tab">
+		
+	</div>
+	<div class="center_div">
+		<div class="search">
+			<form class="example" action="localhost:3000/location" method="POST" style="margin:auto;max-width:300px">
+			  <input type="text" placeholder="Search.." name="search">
+			  <button type="submit"><i class="fa fa-search"></i></button>
+			</form>	
+		</div>
+
+	</div>
+
+</body>
+</html>
